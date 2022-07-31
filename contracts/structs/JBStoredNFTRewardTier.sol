@@ -8,14 +8,12 @@ pragma solidity 0.8.6;
   @member initialQuantity The initial `remainingAllowance` value when the tier was set.
   @member votingUnits The amount of voting significance to give this tier compared to others.
   @memver reservedRate The number of minted tokens needed in the tier to allow for minting another reserved token.
-  @member tokenUri The URI to use for each token within the tier.
 */
-struct JBNFTRewardTierData {
+struct JBStoredNFTRewardTier {
   uint80 contributionFloor;
   uint48 lockedUntil;
   uint48 remainingQuantity;
   uint48 initialQuantity;
   uint16 votingUnits;
   uint16 reservedRate;
-  bytes32 tokenUri;
 }
